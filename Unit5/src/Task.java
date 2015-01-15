@@ -24,6 +24,13 @@ public class Task {
     }
     
     public String toString() {
-        return "Task{" + "name=" + name + ", description=" + description + '}';
+        return "Name:     "+name+"\nDescription: "+description+"\n========\n";
     }
+
+    boolean validate() {
+        if(name ==null || description ==null ||name.equals("")||description.equals(""))
+            return false;
+        else return true;
+    }
+    
 }
