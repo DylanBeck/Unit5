@@ -16,10 +16,10 @@ public class LinkedPriorityQueue implements PriorityQueue{
 
     }
     public Object dequeue(){
-        if (hasData() == false){
-                
+        if (hasData() == true){
+             return list.remove(0);   
         }
-        return list.remove(0);
+        
     }
     
     public void enqueue(Object o){
