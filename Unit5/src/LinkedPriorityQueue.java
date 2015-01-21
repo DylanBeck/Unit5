@@ -16,9 +16,12 @@ public class LinkedPriorityQueue implements PriorityQueue{
 
     }
     public Object dequeue(){
-        if (hasData() == true){
-             return list.remove(0);   
-        }
+        	if(!list[0].isEmpty())return list[0].remove(0);
+                else if(!list[1].isEmpty())
+                    return list[1].remove(0);
+                else if(!list[2].isEmpty())
+                    return list[2].remove(0);
+                else throw new IllegalStateException("Queue is empty");
         
     }
     
@@ -53,6 +56,6 @@ public class LinkedPriorityQueue implements PriorityQueue{
     public Object peekFront() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
 
