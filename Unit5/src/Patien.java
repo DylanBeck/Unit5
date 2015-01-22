@@ -9,11 +9,12 @@
  */
 public class Patien {
     private String name, status;
+    int priority;
     
-    public Patien(String nm, String st){
+    public Patien(String nm, String st, int pr){
         name=nm;
-        
-        status = st;
+        status= st;
+        priority = pr;
     }
     public String toString(){
         return "Name: "+ name + "\tStatus:"+status+"\n";
